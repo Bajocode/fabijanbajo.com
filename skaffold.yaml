@@ -13,5 +13,5 @@ deploy:
     - name: fabijanbajo
       chartPath: ./kubernetes/fabijanbajo
       valuesFiles:
-      - ./kubernetes/fabijanbajo
+      - ./kubernetes/fabijanbajo/values.yaml
       namespace: fabijanbajo
