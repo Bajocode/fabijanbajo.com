@@ -24,7 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "docker:latest": "DOCKER_BUILDKIT=true docker build -t fabijanbajo/fabijanbajo.com . && docker push fabijanbajo/fabijanbajo.com:latest"
+    "docker:latest": "docker build -t fabijanbajo/fabijanbajo.com . && docker push fabijanbajo/fabijanbajo.com:latest"
   },
   "eslintConfig": {
     "extends": "react-app"
