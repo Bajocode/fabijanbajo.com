@@ -8,13 +8,13 @@ const Contact: React.FC = () => (
         action="https://formspree.io/youremail@mail.com"
         method="POST"
       >
-        <div className="form-group w-75">
+        <div className="form-group w-80">
           <input type="name" className="form-control" placeholder="Name" name="name" required />
         </div>
-        <div className="form-group w-75">
+        <div className="form-group w-80">
           <input type="email" className="form-control" placeholder="Email" name="name" required />
         </div>
-        <div className="form-group w-75">
+        <div className="form-group w-80">
           <textarea
             className="form-control"
             placeholder="Message"
@@ -24,7 +24,7 @@ const Contact: React.FC = () => (
             defaultValue=""
           />
         </div>
-        <button type="submit" className="btn btn-submit btn-primary w-75">Submit</button>
+        <button type="submit" className="btn btn-submit btn-primary w-80">Submit</button>
       </form>
     </div>
   </section>
