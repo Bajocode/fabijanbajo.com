@@ -1,6 +1,10 @@
 module.exports =  {
   parser: '@typescript-eslint/parser',
   extends: ["airbnb-typescript"],
+  env: {
+    browser: true,
+    jest: true
+  },
   parserOptions:  {
     ecmaVersion: 2018,  // Allows for the parsing of modern ECMAScript features
     sourceType: 'module',  // Allows for the use of imports
