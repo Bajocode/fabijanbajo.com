@@ -1,11 +1,11 @@
-# Default values for fabijanbajo.com.
+# Default values for fabijanbajo.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 3
 
 image:
-  repository: fabijanbajo/fabijanbajo.com
+  repository: fabijanbajo/fabijanbajo
   tag: latest
   pullPolicy: Always
 

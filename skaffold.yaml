@@ -6,7 +6,7 @@ build:
     gitCommit:
       variant: CommitSha
   artifacts:
-  - image: fabijanbajo/fabijanbajo.com
+  - image: fabijanbajo/fabijanbajo
 deploy:
   helm:
     releases:
@@ -14,7 +14,7 @@ deploy:
       chartPath: ./kubernetes/fabijanbajo
       namespace: fabijanbajo
       values:
-        image: fabijanbajo/fabijanbajo.com
+        image: fabijanbajo/fabijanbajo
       valuesFiles:
       - ./kubernetes/fabijanbajo/values.yaml
     flags:
