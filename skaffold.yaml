@@ -4,7 +4,7 @@ kind: Config
 build:
   tagPolicy:
     gitCommit:
-      variant: CommitSha
+      variant: AbbrevCommitSha
   artifacts:
   - image: fabijanbajo/fabijanbajo
 deploy:
@@ -17,6 +17,3 @@ deploy:
         image: fabijanbajo/fabijanbajo
       valuesFiles:
       - ./kubernetes/fabijanbajo/values.yaml
-    flags:
-      upgrade:
-      - --install
