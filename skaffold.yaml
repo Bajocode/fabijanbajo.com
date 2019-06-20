@@ -3,17 +3,14 @@ apiVersion: skaffold/v1beta11
 kind: Config
 build:
   tagPolicy:
-    gitCommit:
-      variant: AbbrevCommitSha
+    gitCommit: {}
   artifacts:
   - image: fabijanbajo/fabijanbajo
 deploy:
   helm:
     releases:
     - name: fabijanbajo
-      chartPath: ./kubernetes/fabijanbajo
+      chartPath: kubernetes/fabijanbajo
       namespace: fabijanbajo
       values:
         image: fabijanbajo/fabijanbajo
-      valuesFiles:
-      - ./kubernetes/fabijanbajo/values.yaml
