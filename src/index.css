@@ -1,5 +1,5 @@
 body { 
-  background-color: black
+  background-color: black;
 }
 
 .bg-dark {
@@ -10,6 +10,7 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin-bottom: 0;
+  line-height: 250%;
   background-color: black;
 }
 
@@ -30,4 +31,14 @@ body {
 
 .jumbotron-heading {
   color: white;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: transparent;
+}
+
+footer p {
+  margin-bottom: .25rem;
 }

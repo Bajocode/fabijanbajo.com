@@ -29,7 +29,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "docker:latest": "docker build -t fabijanbajo/fabijanbajo . && docker push fabijanbajo/fabijanbajo:latest"
+    "docker:latest": "docker build -t fabijanbajo/fabijanbajo . && docker push fabijanbajo/fabijanbajo:latest",
+    "deploy:latest": "npm run docker:latest && helm upgrade --install fabijanbajo ./kubernetes/fabijanbajo --namespace fabijanbajo"
   },
   "eslintConfig": {
     "extends": "react-app"

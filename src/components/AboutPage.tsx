@@ -3,7 +3,7 @@ import React from 'react';
 const AboutPage: React.FC = () => (
   <div className="row mt-5">
     <div className="col-12 order-lg-1">
-      <h3 className="mb-4">Hi</h3>
+      <h2>Hi</h2>
       <p>
         My current role is “Cloud Native Engineer / Solutions Architect”. I get
         excited from new design patterns and believe in learning about the inner

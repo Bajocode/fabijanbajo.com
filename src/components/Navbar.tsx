@@ -10,8 +10,8 @@ const Navbar: React.FC = () => (
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <div className="navbar-nav mr-auto">
-          <NavLink className="nav-item nav-link" to="/about">About</NavLink>
-          <NavLink className="nav-item nav-link" to="/contact">Contact</NavLink>
+          <a className="nav-item nav-link" href="https://github.com/Bajocode">Github</a>
+          <a className="nav-item nav-link" href="https://www.linkedin.com/in/fabijanbajo/">LinkedIn</a>
         </div>
       </div>
     </div>
