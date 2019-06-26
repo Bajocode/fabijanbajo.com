@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1alpha1
+kind: TaskRun
+metadata:
+  name: fabijanbajo-build-taskrun
+  namespace: tekton-pipelines
+spec:
+  serviceAccount: docker-sa
+  taskRef:
+    name: fabijanbajo-kanikobuild-task
+  inputs:
+    resources:
+    - name: fabijanbajo-git
+      resourceRef:
+        name: fabijanbajo-git-resource
+  outputs:
+    resources:
+    - name: fabijanbajo-image
+      resourceRef:
+        name: fabijanbajo-image-resource
