@@ -1,18 +1,18 @@
 import React, { FC } from 'react';
 
-interface IProjectCardProps {
+interface IPostCardProps {
   title: string;
   body: string;
   imgPath: string;
   imgAlt: string;
 }
 
-const ProjectCard: React.FC<IProjectCardProps> = ({
+const PostCard: React.FC<IPostCardProps> = ({
   title,
   body,
   imgPath,
   imgAlt,
-}: IProjectCardProps) => (
+}: IPostCardProps) => (
   <div className="col-md-6 col-lg-4 d-flex align-items-stretch">
     <div className="card mb-3">
       <img className="card-img-top" src={imgPath} alt={imgAlt} />
@@ -24,4 +24,4 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
   </div>
 );
 
-export default ProjectCard;
+export default PostCard;
