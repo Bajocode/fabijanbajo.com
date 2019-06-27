@@ -30,9 +30,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "docker:latest": "docker build -t fabijanbajo/fabijanbajo . && docker push fabijanbajo/fabijanbajo",
+    "docker:latest": "docker build -t gcr.io/fabijanbajo/fabijanbajo . && docker push gcr.io/fabijanbajo/fabijanbajo",
     "deploy:latest": "npm run docker:latest && helm upgrade --install fabijanbajo ./kubernetes/fabijanbajo --namespace fabijanbajo",
-    "docker": "export COMMIT_HASH=$(git rev-parse --short HEAD) && docker build -t fabijanbajo/fabijanbajo:${COMMIT_HASH} . && docker push fabijanbajo/fabijanbajo:${COMMIT_HASH}",
+    "docker": "export COMMIT_HASH=$(git rev-parse --short HEAD) && docker build -t gcr.io/fabijanbajo/fabijanbajo:${COMMIT_HASH} . && docker push gcr.io/fabijanbajo/fabijanbajo:${COMMIT_HASH}",
     "deploy": "npm run docker && helm upgrade --install fabijanbajo ./kubernetes/fabijanbajo --namespace fabijanbajo --set image.tag=$COMMIT_HASH"
   },
   "eslintConfig": {

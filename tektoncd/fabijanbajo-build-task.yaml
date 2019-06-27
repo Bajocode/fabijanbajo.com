@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1alpha1
 kind: Task
 metadata:
-  name: fabijanbajo-kanikobuild-task
+  name: fabijanbajo-build-task
   namespace: tekton-pipelines
 spec:
   inputs:
@@ -10,22 +10,23 @@ spec:
       type: git
     params:
     - name: dockerfile
-      default: Dockerfile
+      default: /workspace/fabijanbajo-git/Dockerfile
     - name: buildcontext
-      default: .
+      default: /workspace/fabijanbajo-git
   outputs:
     resources:
     - name: fabijanbajo-image
       type: image
   steps:
   - name: build-test-push
-    image: gcr.io/kaniko-project/executor:debug
+    image: gcr.io/kaniko-project/executor:debug-v0.10.0
     env:
     - name: "DOCKER_CONFIG"
       value: "/builder/home/.docker/"
     command:
     - /kaniko/executor
     args:
-    - --dockerfile=/workspace/fabijanbajo-git/${inputs.params.dockerfile}
+    - --dockerfile=${inputs.params.dockerfile}
     - --destination=${outputs.resources.fabijanbajo-image.url}
-    - --context=/workspace/fabijanbajo-git/${inputs.params.buildcontext}
+    - --context=${inputs.params.buildcontext}
+    - --target=release

@@ -4,9 +4,9 @@ metadata:
   name: fabijanbajo-build-taskrun
   namespace: tekton-pipelines
 spec:
-  serviceAccount: docker-sa
+  serviceAccount: docker-gcr-sa
   taskRef:
-    name: fabijanbajo-kanikobuild-task
+    name: fabijanbajo-build-task
   inputs:
     resources:
     - name: fabijanbajo-git

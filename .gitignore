@@ -14,3 +14,7 @@ npm-debug.log
 
 # editor
 .vscode
+
+.DS_Store
+
+*secret.yaml
