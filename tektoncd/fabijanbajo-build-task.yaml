@@ -18,15 +18,22 @@ spec:
     - name: fabijanbajo-image
       type: image
   steps:
-  - name: build-test-push
-    image: gcr.io/kaniko-project/executor:debug-v0.10.0
-    env:
-    - name: "DOCKER_CONFIG"
-      value: "/builder/home/.docker/"
-    command:
-    - /kaniko/executor
+  - name: build-and-push
+    image: gcr.io/makisu-project/makisu:v0.1.11
     args:
-    - --dockerfile=${inputs.params.dockerfile}
-    - --destination=${outputs.resources.fabijanbajo-image.url}
-    - --context=${inputs.params.buildcontext}
-    - --target=release
+      - build
+      - --push=gcr.io
+      - --modifyfs=true
+      - --tag=fabijanbajo/fabijanbajo:latest
+      - --registry-config=/registry-config/registry.yaml
+      - ${inputs.params.buildcontext}
+    env:
+    - name: DOCKER_CONFIG
+      value: /builder/home/.docker
+    volumeMounts:
+    - name: registry-config
+      mountPath: /registry-config
+  volumes:
+  - name: registry-config
+    secret:
+      secretName: docker-registry-config

@@ -4,7 +4,6 @@ metadata:
   name: fabijanbajo-build-taskrun
   namespace: tekton-pipelines
 spec:
-  serviceAccount: docker-gcr-sa
   taskRef:
     name: fabijanbajo-build-task
   inputs:
