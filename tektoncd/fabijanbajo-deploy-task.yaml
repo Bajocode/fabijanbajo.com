@@ -1,0 +1,23 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Task
+metadata:
+  name: fabijanbajo-deploy-task
+  namespace: tekton-pipelines
+spec:
+  inputs:
+    resources:
+    - name: fabijanbajo-git
+      type: git
+    - name: fabijanbajo-image
+      type: image
+    - name: fabijanbajo-cluster
+      type: cluster
+  steps:
+  - name: deploy
+    image: image-wtih-kubectl
+    command: ["bash"]
+    args:
+      - "-c"
+      - kubectl --kubeconfig
+        /workspace/${inputs.resources.testCluster.Name}/kubeconfig --context
+        ${inputs.resources.testCluster.Name} apply -f /workspace/service.yaml'
