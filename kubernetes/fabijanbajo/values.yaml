@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: fabijanbajo/fabijanbajo
+  repository: gcr.io/fabijanbajo/fabijanbajo
   tag: latest
   pullPolicy: Always
 
