@@ -8,16 +8,17 @@ spec:
     resources:
     - name: fabijanbajo-git
       type: git
-    - name: fabijanbajo-image
-      type: image
-    - name: fabijanbajo-cluster
-      type: cluster
+    params:
+    - name: chartpath
+      default: /workspace/fabijanbajo-git/kubernetes/fabijanbajo
+    - name: chartname
+      default: fabijanbajo
   steps:
   - name: deploy
-    image: image-wtih-kubectl
-    command: ["bash"]
+    image: lachlanevenson/k8s-helm:v2.14.1
+    command: ["helm"]
     args:
-      - "-c"
-      - kubectl --kubeconfig
-        /workspace/${inputs.resources.testCluster.Name}/kubeconfig --context
-        ${inputs.resources.testCluster.Name} apply -f /workspace/service.yaml'
+      - upgrade
+      - --install
+      - ${inputs.params.chartname}
+      - ${inputs.params.chartpath} 
