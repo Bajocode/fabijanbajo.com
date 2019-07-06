@@ -1,7 +1,0 @@
-gitSync:
-  repo: https://github.com/Bajocode/fabijanbajo.com.git
-
-cicd:
-  tekton:
-    pipelinePath: tektoncd/fabijanbajo-pipeline.yaml
-    pipelineRunPath: tektoncd/fabijanbajo-pipelinerun.yaml
