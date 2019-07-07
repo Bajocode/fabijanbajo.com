@@ -1,44 +1,47 @@
+/* Global */
 body { 
   background-color: black;
 }
-
-.bg-dark {
+nav.bg-dark {
   background-color: transparent !important;
 }
 
-.jumbotron {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin-bottom: 0;
-  line-height: 250%;
+/* Jumbotron */
+.jumbotron-transparent {
+  background-color: transparent;
+}
+.jumbotron-background-image {
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.overlay-wrapper {
+  position: relative;
+}
+.jumbotron > .overlay {
+  position: absolute;
   background-color: black;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity: 0.7;
 }
 
-@media (min-width: 768px) {
-  .jumbotron {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
+.line-height-250 {
+  line-height: 250%;
 }
 
-.jumbotron p:last-child {
-  margin-bottom: 0;
-}
-
-.jumbotron .container {
-  max-width: 40rem;
-}
-
-.jumbotron-heading {
-  color: white;
-}
-
+/* Footer */
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: transparent;
 }
-
 footer p {
   margin-bottom: .25rem;
 }
