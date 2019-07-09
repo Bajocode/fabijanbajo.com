@@ -1,7 +1,42 @@
-import { importMDX } from 'mdx.macro';
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import CodeRenderer from '../CodeRenderer';
 
-const TestPost = React.lazy(() => importMDX('../posts/TestPost.mdx'));
+const codeValue = `
+  # Hello
+
+  ## dd
+
+  **dd**
+
+  * d
+  * d
+
+  \`\`\`
+  // outyet is a web server that announces whether or not a particular Go version
+  // has been tagged.
+  package main
+
+  import (
+    "expvar"
+    "flag"
+    "fmt"
+    "html/template"
+    "log"
+    "net/http"
+    "sync"
+    "time"
+  )
+
+  // Command-line flags.
+  var (
+    httpAddr   = flag.String("http", ":8080", "Listen address")
+    pollPeriod = flag.Duration("poll", 5*time.Second, "Poll period")
+    version    = flag.String("version", "1.4", "Go version")
+  )
+  \`\`\`
+`;
+
 const Post: React.FC = () => (
   <div>
     <header className="jumbotron jumbotron-background-image" style={{ backgroundImage: `url(${'img/heart-disease-prediction.jpg'})` }}>
@@ -24,9 +59,7 @@ const Post: React.FC = () => (
     <article>
       <div className="container">
         <div className="col-lg-8 col-md-10 mx-auto text-white">
-          <React.Suspense fallback={<div>Loading...</div>}>
-            <TestPost />
-          </React.Suspense>
+          <ReactMarkdown source={codeValue} renderers={{ code: CodeRenderer }} />
         </div>
       </div>
     </article>
