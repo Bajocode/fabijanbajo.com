@@ -5,41 +5,14 @@ import CodeRenderer from '../CodeRenderer';
 const codeValue = `
   # Hello
 
-  ## dd
-
-  **dd**
-
-  * d
-  * d
-
-  \`\`\`
-  // outyet is a web server that announces whether or not a particular Go version
-  // has been tagged.
-  package main
-
-  import (
-    "expvar"
-    "flag"
-    "fmt"
-    "html/template"
-    "log"
-    "net/http"
-    "sync"
-    "time"
-  )
-
-  // Command-line flags.
-  var (
-    httpAddr   = flag.String("http", ":8080", "Listen address")
-    pollPeriod = flag.Duration("poll", 5*time.Second, "Poll period")
-    version    = flag.String("version", "1.4", "Go version")
-  )
+  \`\`\`typescript
+  const some = 5;
   \`\`\`
 `;
 
 const Post: React.FC = () => (
   <div>
-    <header className="jumbotron jumbotron-background-image" style={{ backgroundImage: `url(${'img/heart-disease-prediction.jpg'})` }}>
+    <header className="jumbotron jumbotron-background-image" style={{ backgroundImage: `url(${'img/placeholder.jpg'})` }}>
       <div className="overlay" />
       <div className="container">
         <div className="row">
