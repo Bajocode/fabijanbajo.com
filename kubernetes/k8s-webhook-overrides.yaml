@@ -24,10 +24,9 @@ webhook:
       sed -e "s|<TARGETTAG_REPLACEME>|$COMMIT_HASH|g" \
         -e "s|<REPOURL_REPLACEME>|$REPO_HTTPS|g" \
         /emptydir-volume/pipeline-job.yaml > /emptydir-volume/pipeline-job-replaced.yaml
-      kubectl --token=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token) \
-        --server=https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_SERVICE_PORT \
-        --certificate-authority=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt \
-        apply -f /emptydir-volume/pipeline-job-replaced.yaml
+      alias k="kubectl --token=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token) --server=https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_SERVICE_PORT --certificate-authority=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
+      k delete -f /emptydir-volume/pipeline-job-replaced.yaml > /dev/null 2>&1
+      k create -f /emptydir-volume/pipeline-job-replaced.yaml
 
 pipelineJob:
   clone:
