@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ProfileBgImage: React.FC = () => (
-  <div>
+const ProfileBg: React.FC = () => (
+  <section>
     <img className="img-fluid " src="img/me.jpg" alt="" />
-  </div>
+  </section>
 );
 
-export default ProfileBgImage;
+export default ProfileBg;
