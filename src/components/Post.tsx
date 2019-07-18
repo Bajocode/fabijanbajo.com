@@ -3,14 +3,15 @@ import ReactMarkdown from 'react-markdown';
 import CodeRenderer from '../CodeRenderer';
 
 interface IPostProps {
-  markdownContent: string;
+  title: string;
+  body: string;
 }
 
-const Post: React.FC<IPostProps> = ({ markdownContent }: IPostProps) => (
+const Post: React.FC<IPostProps> = ({ body }: IPostProps) => (
   <article>
     <div className="container">
       <div className="col-lg-8 col-md-10 mx-auto text-white">
-        <ReactMarkdown source={markdownContent} renderers={{ code: CodeRenderer }} />
+        <ReactMarkdown source={body} renderers={{ code: CodeRenderer }} />
       </div>
     </div>
   </article>
