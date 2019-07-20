@@ -8,42 +8,42 @@ ingress:
   - host: devops.fabijanbajo.com
     paths:
     - /hooks/github-webhook
+    - /hooks/gitlab-webhook
   tls:
   - secretName: fabijanbajo-tls-secret
     hosts:
     - devops.fabijanbajo.com
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
 
 webhook:
   github:
     endpoint: github-webhook  
     secret: "}VY*IsCn/OX:7R@"
     branch: master
-    script: |-
-      #!/bin/bash
-      export COMMIT_HASH=$1 REPO_HTTPS=$2 REPO_SSH=$3
-      sed -e "s|<TARGETTAG_REPLACEME>|$COMMIT_HASH|g" \
-        -e "s|<REPOURL_REPLACEME>|$REPO_HTTPS|g" \
-        /emptydir-volume/pipeline-job.yaml > /emptydir-volume/pipeline-job-replaced.yaml
-      alias k="kubectl --token=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token) --server=https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_SERVICE_PORT --certificate-authority=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
-      k delete -f /emptydir-volume/pipeline-job-replaced.yaml > /dev/null 2>&1
-      k create -f /emptydir-volume/pipeline-job-replaced.yaml
+    isScriptInline: false
 
 pipelineJob:
+  enabled: true
   clone:
-    cloningRepositoryUrl: <REPOURL_REPLACEME>
+    cloningRepositoryUrl: <URL_FROM_WEBHOOK_PAYLOAD>
     sshSecret: ssh-secret
   build:
     buildToolImage:
-      repository: gcr.io/makisu-project/makisu 
-      tag: v0.1.11
-      pullPolicy: Always
       makisuSecret: docker-registry-config
     targetImage:
       host: gcr.io
       repository: fabijanbajo/fabijanbajo
-      tag: <TARGETTAG_REPLACEME>
+      tag: <COMMIT_HASH_FROM_WEBHOOK_PAYLOAD>
   deploy:
     helmChart:
       name: fabijanbajo
       namespace: fabijanbajo
       path: kubernetes
+
