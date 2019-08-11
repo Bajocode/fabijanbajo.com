@@ -12,7 +12,7 @@ RUN        find . \
            -mindepth 1 \
            -exec rm -rf {} \;
 
-FROM       nginx:1.16.0-alpine as release
+FROM       nginx:1.16.0-alpine as target
 COPY       --from=builder /home/node/build /usr/share/nginx/html/
 EXPOSE     80/tcp
 ENTRYPOINT ["nginx"]

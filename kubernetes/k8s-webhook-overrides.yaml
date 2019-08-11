@@ -25,7 +25,9 @@ resources:
 webhook:
   github:
     endpoint: github-webhook  
-    secret: "}VY*IsCn/OX:7R@"
+    secret:
+      enabled: true
+      value: "}VY*IsCn/OX:7R@"
     branch: master
     isScriptInline: false
 
@@ -45,5 +47,5 @@ pipelineJob:
     helmChart:
       name: fabijanbajo
       namespace: fabijanbajo
-      path: kubernetes
+      path: fb/fabijanbajo
 

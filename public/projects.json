@@ -5,6 +5,7 @@
     "excerpt": "Predicting heart disease presence with machine learning (Python)",
     "year": "2018",
     "imageUrl": "/img/heart-disease-prediction.jpg",
+    "postUrl": "https://github.com/Bajocode/heart-disease-prediction",
     "projectUrl": "https://github.com/Bajocode/heart-disease-prediction"
   },
   {
@@ -13,6 +14,7 @@
     "excerpt": "Kubernetes webhook consumer, equipped and preconfigured to continuously integrate and deploy your Github and Gitlab projects.",
     "year": "2019",
     "imageUrl": "/img/k8s-webhook.png",
+    "postUrl": "https://github.com/Bajocode/k8s-webhook",
     "projectUrl": "https://github.com/Bajocode/k8s-webhook"
   },
   {
@@ -21,6 +23,7 @@
     "excerpt": "A movie app experiment showcasing modern architectural iOS patterns",
     "year": "2017",
     "imageUrl": "/img/ios-architectures.png",
+    "postUrl": "https://github.com/Bajocode/exploring-modern-ios-architectures",
     "projectUrl": "https://github.com/Bajocode/exploring-modern-ios-architectures"
   }
 ]

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About: React.FC = () => (
+const AboutSection: React.FC = () => (
   <section className="jumbotron jumbotron-transparent text-center ">
     <div className="container">
       <div className="col-lg-8 col-md-10 mx-auto">
@@ -14,4 +14,4 @@ const About: React.FC = () => (
   </section>
 );
 
-export default About;
+export default AboutSection;
