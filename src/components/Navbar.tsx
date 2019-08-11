@@ -1,10 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { A } from 'hookrouter';
 
 const Navbar: React.FC = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="container">
-      <NavLink className="navbar-brand nav-link" to="/">Fabijan Bajo</NavLink>
+      <A className="navbar-brand nav-link" href="/">Fabijan Bajo</A>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon" />
       </button>
