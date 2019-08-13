@@ -2,43 +2,31 @@
   {
     "id": "0",
     "title": "title",
-    "body": "# Title ## Introduction This post is about ### Funny info But also ## Code ```typescript const helloWorld = 'Hello world!'; console.log(`just and example`); ``` `;",
-    "excerpt": "excerpt",
-    "postUrl": "/img/placeholder.jpeg"
+    "excerpt": "excerpt"
   },
   {
     "id": "1",
     "title": "title",
-    "body": "body",
-    "excerpt": "excerpt",
-    "postUrl": "/img/placeholder.jpeg"
+    "excerpt": "excerpt"
   },
   {
     "id": "2",
     "title": "title",
-    "body": "body",
-    "excerpt": "excerpt",
-    "postUrl": "/img/placeholder.jpeg"
+    "excerpt": "excerpt"
   },
   {
     "id": "3",
     "title": "title",
-    "body": "body",
-    "excerpt": "excerpt",
-    "postUrl": "/img/placeholder.jpeg"
+    "excerpt": "excerpt"
   },
   {
     "id": "4",
     "title": "title",
-    "body": "body",
-    "excerpt": "excerpt",
-    "postUrl": "/img/placeholder.jpeg"
+    "excerpt": "excerpt"
   },
   {
     "id": "5",
     "title": "title",
-    "body": "body",
-    "excerpt": "excerpt",
-    "postUrl": "/img/placeholder.jpeg"
+    "excerpt": "excerpt"
   }
 ]
