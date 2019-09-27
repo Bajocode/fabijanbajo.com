@@ -1,32 +1,23 @@
 [
   {
     "id": "0",
-    "title": "title",
-    "excerpt": "excerpt"
+    "title": "title0",
+    "body": "## Description\n \n [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.\n \n Actually, there are few API Gateway providers out there, like Nginx Plus, Amazon API Gateway, IBM API Connect, and Microsoft Azure API Management. But here I want to create my own because hands-on on something makes me more understand what kind of stuff it is.\n \n ## Installation\n",
+    "excerpt": "excerpt0",
+    "slug": "/slug0"
   },
   {
     "id": "1",
-    "title": "title",
-    "excerpt": "excerpt"
+    "title": "title1",
+    "body": "# Body1",
+    "excerpt": "excerpt1",
+    "slug": "/slug1"
   },
   {
     "id": "2",
-    "title": "title",
-    "excerpt": "excerpt"
-  },
-  {
-    "id": "3",
-    "title": "title",
-    "excerpt": "excerpt"
-  },
-  {
-    "id": "4",
-    "title": "title",
-    "excerpt": "excerpt"
-  },
-  {
-    "id": "5",
-    "title": "title",
-    "excerpt": "excerpt"
+    "title": "title2",
+    "body": "# Body2",
+    "excerpt": "excerpt2",
+    "slug": "/slug2"
   }
 ]

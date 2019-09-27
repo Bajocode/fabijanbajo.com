@@ -12,6 +12,8 @@ const Navbar: React.FC = () => (
         <div className="navbar-nav mr-auto">
           <a className="nav-item nav-link" href="https://github.com/Bajocode">Github</a>
           <a className="nav-item nav-link" href="https://www.linkedin.com/in/fabijanbajo/">LinkedIn</a>
+          {/* <a className="nav-item nav-link" href="https://www.linkedin.com/in/fabijanbajo/">Resume</a> */}
+          <a className="nav-item nav-link" href="mailto:bajo09@gmail.com">Contact</a>
         </div>
       </div>
     </div>

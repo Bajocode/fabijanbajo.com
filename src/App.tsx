@@ -1,20 +1,32 @@
 import React from 'react';
 import { useRoutes } from 'hookrouter';
-// import Home from './components/Home';
-import Post from './components/Post';
+import Home from './components/Home';
+import PostDetail from './components/PostDetail';
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
 
+interface IPost {
+  id: string;
+  title: string;
+  body: string;
+  excerpt: string;
+  slug: string;
+}
+
 const App: React.FC = () => {
-  const [post, setPost] = React.useState('');
-  const routes = {
-    '/': () => <Post title="" body={post} />,
-  };
+  const [posts, setPosts] = React.useState<IPost[]>([]);
+  const routes = posts
+    .map(post => () => <PostDetail body={post.body} />)
+    .reduce((accumulator, current, i) => {
+      accumulator[posts[i].slug] = current;
+      return accumulator;
+    }, {});
+  routes['/'] = () => <Home />;
 
   React.useEffect(() => {
-    fetch('posts/test.md')
-      .then(res => res.text())
-      .then(text => setPost(text));
+    fetch('posts.json')
+      .then(result => result.json())
+      .then(json => setPosts(json));
   });
 
   return (

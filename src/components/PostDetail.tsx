@@ -3,11 +3,10 @@ import ReactMarkdown from 'react-markdown';
 import CodeRenderer from '../CodeRenderer';
 
 interface IPostProps {
-  title: string;
   body: string;
 }
 
-const Post: React.FC<IPostProps> = ({ body }: IPostProps) => (
+const PostDetail: React.FC<IPostProps> = ({ body }: IPostProps) => (
   <article>
     <div className="container">
       <div className="col-lg-8 col-md-10 mx-auto text-white">
@@ -17,4 +16,4 @@ const Post: React.FC<IPostProps> = ({ body }: IPostProps) => (
   </article>
 );
 
-export default Post;
+export default PostDetail;

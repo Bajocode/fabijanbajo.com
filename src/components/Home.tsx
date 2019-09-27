@@ -7,8 +7,8 @@ import ProfileBg from './ProfileBg';
 const Home: React.FC = () => (
   <div>
     <AboutSection />
-    <PostsSection />
-    <ContactSection />
+    {/* <PostsSection /> */}
+    {/* <ContactSection /> */}
     <ProfileBg />
   </div>
 );
