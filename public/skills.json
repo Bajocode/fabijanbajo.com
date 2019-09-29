@@ -1,0 +1,32 @@
+[
+  {
+    "id": "0",
+    "title": "Infra / Cloud",
+    "body": "Kubernetes, Docker, Networking, On-premise",
+    "imageUrl": "img/infrastructure.svg"
+  },
+  {
+    "id": "1",
+    "title": "Blockchain",
+    "body": "4th biggest (+ link), Hyperledger, Infra, Cutting edge",
+    "imageUrl": "img/blockchain.svg"
+  },
+  {
+    "id": "2",
+    "title": "Automation",
+    "body": "Automated tests, CI/CD",
+    "imageUrl": "img/automation.svg"
+  },
+  {
+    "id": "4",
+    "title": "Backend",
+    "body": "iOS, Experience, Architectures",
+    "imageUrl": "img/backend.svg"
+  },
+  {
+    "id": "5",
+    "title": "Frontend",
+    "body": "Expanding, Intrigued by declaritive architecture, Enjoy and fun",
+    "imageUrl": "img/frontend.svg"
+  }
+]

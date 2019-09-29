@@ -1,14 +1,12 @@
 import React from 'react';
 import AboutSection from './AboutSection';
-import PostsSection from './PostsSection';
-import ContactSection from './ContactSection';
+import SkillsSection from './SkillsSection';
 import ProfileBg from './ProfileBg';
 
 const Home: React.FC = () => (
   <div>
+    <SkillsSection />
     <AboutSection />
-    {/* <PostsSection /> */}
-    {/* <ContactSection /> */}
     <ProfileBg />
   </div>
 );
