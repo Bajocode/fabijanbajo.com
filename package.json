@@ -34,10 +34,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "docker:latest": "docker build -t gcr.io/fabijanbajo/fabijanbajo . && docker push gcr.io/fabijanbajo/fabijanbajo",
-    "deploy:latest": "npm run docker:latest && helm upgrade --install fabijanbajo ./kubernetes/fabijanbajo --namespace fabijanbajo",
-    "docker": "export COMMIT_HASH=$(git rev-parse --short HEAD) && docker build --no-cache -t gcr.io/fabijanbajo/fabijanbajo:${COMMIT_HASH} . && docker push gcr.io/fabijanbajo/fabijanbajo:${COMMIT_HASH}",
-    "deploy": "npm run docker && helm upgrade --install fabijanbajo ./kubernetes/fabijanbajo -f ./kubernetes/fabijanbajo/values.yaml --namespace fabijanbajo --set image.tag=$COMMIT_HASH"
+    "dockerize": "export COMMIT_HASH=$(git rev-parse --short HEAD) && docker build --no-cache -t gcr.io/fabijanbajo/fabijanbajo:${COMMIT_HASH} . && docker push gcr.io/fabijanbajo/fabijanbajo:${COMMIT_HASH}",
+    "upgrade": "export COMMIT_HASH=$(git rev-parse --short HEAD) && helm upgrade --install fabijanbajo ./kubernetes/fabijanbajo -f ./kubernetes/fabijanbajo/values.yaml --namespace fabijanbajo --set image.tag=$COMMIT_HASH",
+    "deploy": "npm run dockerize && npm run upgrade"
   },
   "browserslist": {
     "production": [
