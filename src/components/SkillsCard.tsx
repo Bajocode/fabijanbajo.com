@@ -15,7 +15,7 @@ const SkillsCard: React.FC<ISkillsCardProps> = (
     </div>
     <div className="card-body text-center">
       <h5 className="card-title">{title}</h5>
-      <p className="text-muted"> </p>
+      <p className="text-muted">{body}</p>
     </div>
   </li>
 );

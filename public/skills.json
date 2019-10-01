@@ -2,31 +2,31 @@
   {
     "id": "0",
     "title": "Infra / Cloud",
-    "body": "Kubernetes, Docker, Networking, On-premise",
+    "body": "Kubernetes, Docker, Helm, Skaffold, IBMCloud, AWS, GCP, Splunk, Datadog, Sysdig, LogDNA",
     "imageUrl": "img/infrastructure.svg"
   },
   {
     "id": "1",
     "title": "Blockchain",
-    "body": "4th biggest (+ link), Hyperledger, Infra, Cutting edge",
+    "body": "Hyperledger Fabric, IBM Blockchain Platform 2, Custom helm charts",
     "imageUrl": "img/blockchain.svg"
   },
   {
     "id": "2",
     "title": "Automation",
-    "body": "Automated tests, CI/CD",
+    "body": "Gitlab CI, Tekton Pipelines, Concourse CI, Jenkins",
     "imageUrl": "img/automation.svg"
   },
   {
     "id": "4",
     "title": "Backend",
-    "body": "iOS, Experience, Architectures",
+    "body": "NodeJS (Hapi, Express, Nest), Go Gin-Gonic, MongoDB, Postgres, CouchDB, LevelDB, Redis, ElasticSearch",
     "imageUrl": "img/backend.svg"
   },
   {
     "id": "5",
     "title": "Frontend",
-    "body": "Expanding, Intrigued by declaritive architecture, Enjoy and fun",
+    "body": "iOS, ReactJS, HTML, CSS",
     "imageUrl": "img/frontend.svg"
   }
 ]
