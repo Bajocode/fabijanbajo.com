@@ -14,7 +14,7 @@ const SkillsCard: React.FC<ISkillsCardProps> = (
       <img className="card-img-top embed-responsive-item" src={imageUrl} alt="Skill icon" />
     </div>
     <div className="card-body text-center">
-      <h5 className="card-title">{title}</h5>
+      <h5 className="card-title text-light">{title}</h5>
       <p className="text-muted">{body}</p>
     </div>
   </li>
