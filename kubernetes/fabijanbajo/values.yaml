@@ -16,7 +16,7 @@ ingress:
   enabled: true
   annotations:
     kubernetes.io/ingress.class: "nginx"    
-    cert-manager.io/issuer: "letsencrypt-prod"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
   hosts:
   - host: test.fabijanbajo.com
     paths:
