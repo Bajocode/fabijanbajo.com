@@ -1,31 +1,26 @@
 replicaCount: 2
-
 image:
   repository: gcr.io/fabijanbajo/fabijanbajo
   tag: latest
   pullPolicy: Always
-
 nameOverride: ""
 fullnameOverride: ""
-
 service:
   type: ClusterIP
   port: 80
-
 ingress:
   enabled: true
   annotations:
     kubernetes.io/ingress.class: "nginx"    
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
   hosts:
-  - host: test.fabijanbajo.com
+  - host: portfolio.fabijanbajo.com
     paths:
     - /
   tls:
   - secretName: fabijanbajo-tls-secret
     hosts:
-    - test.fabijanbajo.com
-         
+    - portfolio.fabijanbajo.com
 resources:
   limits:
     cpu: 100m
@@ -33,9 +28,6 @@ resources:
   requests:
     cpu: 100m
     memory: 128Mi
-
 nodeSelector: {}
-
 tolerations: []
-
 affinity: {}
