@@ -8,6 +8,7 @@ COPY       --chown=node:node . .
 RUN        ["npm", "run", "build"]
 RUN        find . \
            ! -name build \
+           ! -name nginx.conf \
            -maxdepth 1 \
            -mindepth 1 \
            -exec rm -rf {} \;
