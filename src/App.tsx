@@ -16,7 +16,7 @@ interface IPost {
 const App: React.FC = () => {
   const [posts, setPosts] = React.useState<IPost[]>([]);
   const routes = posts
-    .map(post => () => <PostDetail body={post.body} />)
+    .map(post => () => <PostDetail slug={post.slug} />)
     .reduce((accumulator, current, i) => {
       accumulator[posts[i].slug] = current;
       return accumulator;
