@@ -7,7 +7,7 @@ const AboutSection: React.FC = () => (
         <h1 className="display-1 text-white">Hi,</h1>
         <div className="my-5" />
         <p className="text-muted line-height-250">
-            I'm Fabijan, I design, build and analyze (distributed) systems, trying to connect the dots across various domains to solve important problems (at a company or my own thingy, as long as I'm part of something big with passionate people).
+            I'm Fabijan, I design, build and analyze (distributed) systems, trying to connect the dots across various domains (at a company or my own thingy, as long as I'm part of something big with passionate people).
         </p>
       </div>
     </div>
