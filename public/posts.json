@@ -1,20 +1,8 @@
 [
   {
     "id": "0",
-    "title": "Kubernetes Admin Series: Part 1",
-    "excerpt": "Provisioning a CA and Generating TLS Certificates and user Accounts",
-    "slug": "/k8s-admin-series-part1"
-  },
-  {
-    "id": "1",
-    "title": "title1",
-    "excerpt": "excerpt1",
-    "slug": "/slug1"
-  },
-  {
-    "id": "2",
-    "title": "title2",
-    "excerpt": "excerpt2",
-    "slug": "/slug2"
+    "title": "Maintainability in the Face of API Complexity: The What, Why and How of API Gateways",
+    "excerpt": "As organizations transition from monolithic towards more distributed or 'shared-nothing' architectures, where services are self-managed, cloud-managed, or just 'serverless functions', operational complexity increases and offering a dependable API experience becomes challenging...",
+    "slug": "/api-gateways"
   }
 ]

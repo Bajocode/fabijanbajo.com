@@ -7,7 +7,7 @@ const AboutSection: React.FC = () => (
         <h1 className="display-1 text-white">Hi,</h1>
         <div className="my-5" />
         <p className="text-muted line-height-250">
-            I build stuff, try to learn everything I can, connecting the dots across various domains in the hope to solve a big problem soon (at a company or my own thingy, as long as I'm part of something big with passionate people). Having fulfilled dev-ops and engineering roles, from migrating an on-premise e-com platform to the cloud, to consulting a blockchain team in Paris on cloud-native infrastructures, but also developing apps myself, I tend to go vertical in knowledge expansion. At the moment I’m a dev-ops engineer / solutions architect for an international blockchain project, but before this an engineering lead and full-stack mobile developer. I geek out on software architectures, patterns and infrastructure design, reading those nerdy Martin Fowler books etc.
+            I'm Fabijan, I design, build and analyze (distributed) systems, trying to connect the dots across various domains to solve important problems (at a company or my own thingy, as long as I'm part of something big with passionate people).
         </p>
       </div>
     </div>
