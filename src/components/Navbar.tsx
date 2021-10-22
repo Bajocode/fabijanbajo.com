@@ -13,7 +13,7 @@ const Navbar: React.FC = () => (
           <a className="nav-item nav-link" href="https://github.com/Bajocode">Github</a>
           <a className="nav-item nav-link" href="https://www.linkedin.com/in/fabijanbajo/">LinkedIn</a>
           <a className="nav-item nav-link" href="mailto:bajo09@gmail.com">Contact</a>
-          <a className="nav-item nav-link" href="Fabijan_Bajo_Resume.pdf">Resume</a>
+          // <a className="nav-item nav-link" href="Fabijan_Bajo_Resume.pdf">Resume</a>
         </div>
       </div>
     </div>
