@@ -7,7 +7,7 @@ import PostsSection from './PostsSection';
 const Home: React.FC = () => (
   <div className="container pt-4 mt-4">
     <PostsSection />
-    <SkillsSection />
+    // <SkillsSection />
     <AboutSection />
     <ProfileBg />
   </div>
